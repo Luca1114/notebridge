@@ -1,0 +1,108 @@
+/* General Stuff*/
+
+html {
+    background-color: #333642;
+}
+
+* {
+    margin: 0;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    /*Text specific stuff*/
+    letter-spacing: 0.4px;
+    font-size: 15px;
+    font-family: "latobold";
+    color: #D0D4E1;
+}
+
+.align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*! Login PopUP*/
+#LoginPopup {
+    position: absolute;
+    transition: opacity 0.3s ease;
+    will-change: opacity; /* Hint to browser to optimize transition */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* High z-index to ensure it's on top; removed duplicate */
+    width: 100%; /* 450 */
+    background-color: #333642;
+    border: 2px solid #9ca2b6;
+    border-radius: 5px;
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.15);
+    padding: 45px 25px; /* Removed duplicate padding */
+}
+
+#LoginPopup h2 {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#LoginPopup h1 {
+    margin-top: 35px;
+    font-size: 22px;
+    text-align: center;
+}
+
+#LoginPopup p {
+    font-family: 'latoregular';
+    margin-right: 9px;
+}
+
+#LoginPopup input {
+    width: 350px;
+    height: 30px;
+    background-color: #3C3F4C;
+    color: #A8AFC2;
+    border: 2px solid #8E9199;
+    border-radius: 5px;
+    outline: none;
+    font-family: "latoregular";
+    font-size: 15px;
+    padding-left: 10px;
+    transition: all 0.5s;
+}
+
+#LoginPopup input:focus {
+    border: 2px solid #b9bfd3;
+    background-color: #454958;
+}
+
+#LoginForm {
+    display: none;
+}
+
+#SignupForm {
+    display: none;
+}
+
+#LoginPopup .alert {
+    color: #FF9277;
+    text-align:center;
+    font-size: 12px;
+    margin-top: 15px;
+    display: none;
+}
+
+.finalsLog {
+    cursor: pointer;
+    background-color: #D0D4E1;
+    border: none;
+    font-family: 'latobold';
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 16px 22px;
+    color: #3b3f4c;
+}
+

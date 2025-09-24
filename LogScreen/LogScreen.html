@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Bridge | We take the load of your shoulders!</title>
+
+    <!--* JS Links-->
+    <script type="module" src="../JS/firebase.js"></script> <!--This is the Firebase JS File-->
+    <script src="../JS/index.js"></script> <!--This is the Main JS File-->
+    <script type="module" src="../JS/email-password.js"></script>
+
+    <link rel="stylesheet" href="LogScreen.css"> <!-- CSS File Link-->
+    <link rel="stylesheet" href="../FONTS/Lato/stylesheet.css"> <!-- Lato font LINK-->
+</head>
+<body>
+    <div id="LoginPopup">
+
+            <div id="LoginForm">
+                <div class="align"><h2>Login or Sign Up to <label style="color: #EED4A6; margin-left: 5px;">NoteBridge!</label></h2></div>
+                <h1>Login</h1>
+                <div class="align" style="width: 100%; justify-content: center;">
+                    <div>
+                        <div class="align" style="margin-top: 25px;justify-content: space-between;"><p>Email*</p><input id="email1" type="text" name="email" placeholder="How about your email?"></div>
+                        <div class="align" style="margin-top: 15px;justify-content: space-between;"><p>Password*</p><input id="pass1" type="password" name="password" placeholder="Your password please..."></div>
+                    </div>
+                </div>
+
+                <p id="alert1" class="alert">Oh, something's missing! Please fill out all fields...</p>
+
+                <div class="align" style="width: auto; margin-top: 25px;"><Button id="LogInFinal" class="finalsLog">Log In</Button></div>
+
+                <div class="align" style="margin-top: 25px;"><p style="color: #9ba0b4;">You dont have an account yet?</p><p href="" id="signUpBTN" style="color: #D0D4E1; text-decoration: underline; cursor: pointer;">Sign Up now!</p></div>
+            </div>
+
+            <div id="SignupForm">
+                <div class="align"><h2>Login or Sign Up to <label style="color: #EED4A6; margin-left: 5px;">NoteBridge!</label></h2></div>
+                <h1>Sign Up</h1>
+                <div class="align" style="width: 100%; justify-content: center;">
+                    <div>
+                        <div class="align" style="margin-top: 25px;justify-content: space-between;"><p>Nickname*</p>  <input id="nick2" type="text" name="nickname" placeholder="How should we call you?"></div>
+                        <div class="align" style="margin-top: 15px;justify-content: space-between;"><p>Email*</p><input id="email2" type="text" name="email" placeholder="Would you give us your email?"></div>
+                        <div class="align" style="margin-top: 15px;justify-content: space-between;"><p>Password*</p><input id="pass2" type="password" name="password" placeholder="Choose a password"></div>
+                    </div>
+                </div>
+
+                <p id="alert2" class="alert">Oh, something's missing! Please fill out all fields...</p>
+
+                <div class="align" style="width: auto; margin-top: 25px;"><Button id="SignUpFinal" class="finalsLog">Sign Up</Button></div>
+
+                <div class="align" style="margin-top: 25px;"><p style="color: #9ba0b4;">Oh, you already have an account!</p><p href="" id="logInBTN" style="color: #D0D4E1; text-decoration: underline; cursor: pointer;">Log In now!</p></div>
+            </div>
+    </div>
+
+    <!--* JS Links-->
+    <script type="module" src="../JS/loginPopup.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Bridge | We take the load of your shoulders!</title>
+
+    <!--* JS Links-->
+    <script type="module" src="JS/firebase.js"></script> <!--This is the Firebase JS File-->
+    <script type="module" src="JS/index.js"></script> <!--This is the Main JS File-->
+    <script type="module" src="JS/email-password.js"></script>
+
+    
+
+    <link rel="stylesheet" href="index.css"> <!-- CSS LINK-->
+    <link rel="stylesheet" href="FONTS/Lato/stylesheet.css"> <!-- Lato font LINK-->
+</head>
+<body>
+    <div id="AccountSettingsPopUp">
+            <div class="AccountSettingsBackground">
+                <div id="closeAccountPopup" style="cursor: pointer;">
+                    <object style="width: 13px;height: 13px; pointer-events: none;" type="image/svg+xml" data="ICONS/close-rounded.svg">
+                        <img src="ICONS/close-rounded.png" alt="No SVG support">
+                    </object>
+                </div>
+
+                <h3>Account Settings</h3>
+                <div class="align" style="justify-content: space-between; margin-top: 30px;">
+                    <p>Name</p> <input class="textfield" id="nameChangeInput" type="text"> <button id="changeAccountName">Save</button>
+                </div>
+                <div class="align" style="justify-content: start; margin-top: 15px;">
+                    <p style="margin-right: 0px;">Profile Picture</p> <img class="propic" id="propicPOP" src="OTHERASSETS/robotpropic.png" alt="profile picture"> <button id="changeProfilePicture">Change</button>
+                </div>
+                <div class="align"> <button id="SignOutButton">Sign Out</button> </div>
+            </div>
+            <div class="triangle tpos2"></div>
+            <div style="background-color: #333642; height: 5px; width: 17px; position: absolute; z-index: 1000; right: -291.5px; border-radius: 2px;"></div>
+    </div>
+
+    <nav>
+        <div style="display: flex; align-items: center;">
+            <div class="question_btn" style="cursor: pointer;">
+                <object data="ICONS/question_mark.svg" type="image/svg+xml" width="auto" height="20px">
+                    <img src="ICONS/question_mark_fallback.png" alt="Fallback icon" style="height: 20px;">
+                </object>
+            </div>
+    
+            <div class="tab">
+                Tutorial Class
+            </div>
+    
+            <div id="saveClassButton" class="plus_btn" style="cursor: pointer;">
+                <object style="pointer-events: none;" data="ICONS/plus.svg" type="image/svg+xml" width="auto" height="20px">
+                    <img src="ICONS/plus.png" alt="Fallback icon" style="height: 20px;">
+                </object>
+            </div>
+        </div>
+
+        <div id="AccountButton" style="align-items: center; cursor: pointer; display: flex;">
+            <p id="AccountBTN" href=""></p>
+            <img class="propic" src="OTHERASSETS/robotpropic.png" alt="profile picture">
+        </div>
+
+        <a href="LogScreen/LogScreen.html" id="LoginButton">Login/Sign Up</a>
+    </nav>
+
+    <main>
+        <div id="filesPopup" style="height: 0px;">
+            <div id="phase1" style="height: 0px;">
+                <div class="close-tab" id="closePopup">
+                    <object style="width: 13px; margin-right: 5px; pointer-events: none;;" type="image/svg+xml" data="ICONS/close-rounded.svg">
+                        <img src="ICONS/close-rounded.png" alt="No SVG support">
+                    </object>
+                    Close
+                </div>
+                <div class="Background">
+                    <div style="border: 2px dashed #5D5D5D; height: 98.5%; width: auto; display: flex; justify-content: center; align-items: center;">
+                        <div style="height: 80%; width: 40%; border-right: 2px solid #9CA2B6; display: flex; align-items: center; justify-content: center;">
+                            <div>
+                                <div style="justify-content: center; display: flex;">
+                                    <object style="width: 70px;" type="image/svg+xml" data="HtmlElements/attach-icon.svg">
+                                        <img src="HtmlElements/attach-icon.png" alt="No SVG support">
+                                    </object>
+                                </div>
+                                    <div style="justify-content: center; display: flex;">
+                                        <label class="chooseFiles">Choose Files</label>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div style="height: 80%; width: 60%; justify-content: center; display: flex; align-items: center;">
+                            <div>
+                                <div style="justify-content: center; display: flex;">
+                                    <object style="width: 190px;" type="image/svg+xml" data="HtmlElements/google-icons.svg">
+                                        <img src="HtmlElements/google-icons.png" alt="No SVG support">
+                                    </object>
+                                </div>
+
+                                <div style="justify-content: center; display: flex;">
+                                    <input type="text" name="link" class="link" placeholder="Type the Google Drive link...">
+                                </div>
+
+                                <div style="justify-content: center; display: flex;">
+                                        <button class="Next">Next</button>
+                                </div>
+
+
+                                
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+                <div style="background-color: #333642; height: 5px; width: 16px; position: absolute; z-index: 10; left: 27px; border-radius: 2px;"></div>
+                <div class="triangle tpos1"></div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <p class="class_settings_btn">Class Settings</p>
+            
+            <img src="OTHERASSETS/ex_pic/expic1.png" alt="">
+            <img src="OTHERASSETS/ex_pic/expic2.png" alt="">
+            <img src="OTHERASSETS/ex_pic/expic3.png" alt="">
+            <img src="OTHERASSETS/ex_pic/expic4.png" alt="">
+            <img src="OTHERASSETS/ex_pic/expic5.png" alt="">
+
+            <p style="margin-left: 15px;">+ 2 people</p>
+
+            <p class="invite_people_btn">Invite people into your class</p>
+        </div>
+
+        <div style="display: flex;">
+            <div class="file_share">
+                <div class="top">
+                    <div class="plus_btn_2" id="addButton" style="cursor: pointer;">
+                        <object data="ICONS/plus2.svg" style="pointer-events: none;" type="image/svg+xml" width="auto" height="12px">
+                            <img src="ICONS/plus2.png" alt="Fallback icon" style="height: 12px;">
+                        </object>
+                    </div>
+
+                    <div style="display: flex;">
+                        <p>Share notes, slides and any material with your </p>
+                        <p style="margin-left: 3px; color: #F0D6A7;">studymates</p>
+                        <p>!</p>
+                    </div>
+                </div>
+
+                <div class="title_containers">
+                    <div style="display: flex; align-items: center; width: 400px;">
+                            <object data="ICONS/notes1.svg" type="image/svg+xml" width="auto" height="22px">
+                                <img src="ICONS/notes1.png" alt="Fallback icon" style="height: 12px;">
+                            </object>
+                            <p>Notes</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px; padding: 0 20px; overflow:auto;">
+                    <div class="notes_cont main_conts">
+                        <p id="nonotesmessage" style="font-family: 'latoregular'; color: #9ba0b4;"></p>
+                        <!--*-->
+                        <div id="containernoteschips">
+                        </div>
+                        <!--*-->
+                    </div>
+
+                    <div class="slides_cont main_conts"></div>
+                    <div class="o_materials_cont main_conts"></div>
+                </div>
+            </div>
+
+            <div class="chat"></div>
+        </div>
+    </main>
+
+    <!--* JS Links-->
+    <script type="module" src="JS/chipsArrange.js"></script>
+    <script type="module" src="JS/classManagement.js"></script>
+    <script type="module" src="JS/loginPopup.js"></script>
+    <script type="module" src="JS/userPopup.js"></script>
+    <script type="module" src="JS/accountPopup.js"></script>
+</body>
+</html>
