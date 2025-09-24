@@ -1,9 +1,9 @@
-import { auth, db } from '/js/firebase.js';
+import { auth, db } from '/JS/firebase.js';
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
 import { displayUserName } from './userPopup.js';
-import { updateAccountName } from '/js/accountPopup.js'; // Import the new function
+import { updateAccountName } from '/JS/accountPopup.js'; // Import the new function
 
 export var displayName = "";
 

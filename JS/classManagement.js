@@ -1,4 +1,4 @@
-import { db } from './firebase.js'; // Path to firebase.js in the same folder
+import { db } from '/JS/firebase.js'; // Path to firebase.js in the same folder
 import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
 document.getElementById('saveClassButton').addEventListener('click', async () => {
