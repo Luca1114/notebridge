@@ -45,7 +45,7 @@ export function createUser() { //This function is visible to other files
       try {
         await setDoc(doc(db, 'users', user.uid), accountData);
         console.log('Account info saved');
-        window.location.href = '../Index.html'
+        window.location.href = '../index.html'
       } catch (e) {
         console.error('Error saving account:', e);
       }
@@ -90,7 +90,7 @@ export function signinUser(){
         if (user) {
           //alert('User logged in:', user.uid);
           //TODO Here it will need to check if it's your first time and provide you with a tutorial
-          window.location.href = '../Index.html';
+          window.location.href = '../index.html';
         } else {
           console.log('No user logged in');
         }
