@@ -45,7 +45,7 @@ export function createUser() { //This function is visible to other files
       try {
         await setDoc(doc(db, 'users', user.uid), accountData);
         console.log('Account info saved');
-        window.location.href = '../index.html'
+        window.location.href = './LogScreenClass.html'
       } catch (e) {
         console.error('Error saving account:', e);
       }

@@ -37,10 +37,17 @@ body {
     z-index: 1000; /* High z-index to ensure it's on top; removed duplicate */
     width: 100%; /* 450 */
     background-color: #333642;
-    border: 2px solid #9ca2b6;
+    border-top: 2px solid #9ca2b6;
+    border-bottom: 2px solid #9ca2b6;
     border-radius: 5px;
     box-shadow: 0px 0 30px rgba(0, 0, 0, 0.15);
     padding: 45px 25px; /* Removed duplicate padding */
+}
+
+.center {
+    text-align: center;
+    justify-content: center;
+    display: flex;
 }
 
 #LoginPopup h2 {
@@ -106,3 +113,18 @@ body {
     color: #3b3f4c;
 }
 
+/*LogScreenClass*/
+
+#LoginPopup input.codeForm {
+    padding-left: 4px;
+    background-color: #666B7A;
+    color: #9CE4CF;
+    border: none;
+    width: 60px;
+    font-family: "latobold";
+    text-transform:uppercase;
+}
+
+#LoginPopup input.codeForm::placeholder {
+    color: #333642;
+}

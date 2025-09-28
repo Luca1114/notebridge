@@ -36,7 +36,7 @@ const openPopup = () => {
     closeAccountPopup();
 
     if (popup) {
-        console.log('Opening popup, initial state:', popup.style.opacity, popup.style.visibility);
+        //console.log('Opening popup, initial state:', popup.style.opacity, popup.style.visibility);
         popup.style.visibility = 'visible'; // Make element visible
         popup.style.opacity = '0'; // Ensure starting point
         // Force reflow to apply initial state
@@ -52,7 +52,7 @@ const openPopup = () => {
 // Close popup with fade-out
 export const closePopup = () => {
     if (popup) {
-        console.log('Closing popup, initial state:', popup.style.opacity, popup.style.visibility);
+        // popup, initial state:', popup.style.opacity, popup.style.visibility);
         popup.style.opacity = '0'; // Start fade-out
         setTimeout(() => {
             popup.style.visibility = 'hidden'; // Hide after transition
@@ -66,7 +66,7 @@ export const closePopup = () => {
 // Detect clicks outside the popup
 document.addEventListener('click', function(event) {
     if (popup && popup.classList.contains('visible') && !popup.contains(event.target)) {
-        console.log('Clicked outside the visible popup, target:', event.target);
+        //console.log('Clicked outside the visible popup, target:', event.target);
         closePopup();
     }
 });

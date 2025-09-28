@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteBridge | We take the load of your shoulders!</title>
+
+    <link rel="icon" type="image" href="/HtmlElements/favicon.png"> <!-- Favicon -->
+
+    <link rel="stylesheet" href="LogScreen.css"> <!-- CSS File Link-->
+    <link rel="stylesheet" href="../FONTS/Lato/stylesheet.css"> <!-- Lato font LINK-->
+
+    <!--* JS Links -->
+    <script type="module" src="../JS/firebase.js"></script> <!--This is the Firebase JS File-->
+    <script src="../JS/index.js"></script> <!--This is the Main JS File-->
+</head>
+<body>
+    <div id="LoginPopup" class="center">
+        <div>
+            <h3 style="color: #E8CEA1; font-size: 22px;">Create a class!</h3>
+            <div class="align"> <p style="margin-top: 10px; width: 60%;">A class is the hub for a specific subject or course. Classmates can drop resources and interact. <a style="color: #edeef2; font-size: 15px;" href="">Learn more</a> </p></div> <!-- TODO Here link the relevant tutorial page -->
+
+            <div class="align" style="width: auto; margin-top: 25px;"> <p>Class name*</p> <input id="classNameInput" type="text" name="name" placeholder="Choose a name for your new class!"> </div>
+            <div class="align" style="width: auto; margin-top: 25px; margin-bottom: 25px;"><Button id="CreateClassPageButton" class="finalsLog" style="background-color: #E8CEA1;">Create class</Button></div>
+            
+            <div class="align"><div style="border-top: 2px solid #9CA2B6; margin-top: 30px; width: 70%;"><div class="align" style="position: relative; bottom: 10px;"><p style="font-weight: bold; color: #9CA2B6; background-color: #333642; padding:0px 15px; width: fit-content;">OR</p></div></div></div>
+
+            <h3 style="color: #8BADFB; font-size: 22px; margin-top: 25px;">Join a class!</h3>
+            <div class="align"> <p style="margin-top: 10px; width: 40%;">You can join other people's class with the class code <a style="color: #edeef2; font-size: 15px;" href="">Learn more</a> </p></div> <!-- TODO Here link the relevant tutorial page -->
+
+            <div class="align" style="width: auto; margin-top: 25px;"> <p>Class code*</p> <input class="codeForm" id="classCodeInput" type="text" name="name" maxlength="5" placeholder="# # # # #"> </div>
+            <div class="align" style="width: auto; margin-top: 25px;"><Button id="JoinClassButton" class="finalsLog" style="background-color: #8BADFB">Join class</Button></div>
+        </div>
+    </div>
+
+    <!--* JS Links -->
+    <script type="module" src="../JS/classMove.js""></script> <!--This is the script that creates the class or helps you login into one -->
+</body>
+</html>
