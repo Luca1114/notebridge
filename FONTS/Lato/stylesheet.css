@@ -19,9 +19,6 @@
 
 }
 
-
-
-
 @font-face {
     font-family: 'latohairline';
     src: url('lato-thin-webfont.woff2') format('woff2'),
@@ -30,9 +27,6 @@
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'latobold';
@@ -43,9 +37,6 @@
 
 }
 
-
-
-
 @font-face {
     font-family: 'latoblack';
     src: url('lato-black-webfont.woff2') format('woff2'),
@@ -54,9 +45,6 @@
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'latoregular';
@@ -67,9 +55,6 @@
 
 }
 
-
-
-
 @font-face {
     font-family: 'latoblack_italic';
     src: url('lato-blackitalic-webfont.woff2') format('woff2'),
@@ -78,9 +63,6 @@
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'latobold_italic';
@@ -91,9 +73,6 @@
 
 }
 
-
-
-
 @font-face {
     font-family: 'latolight';
     src: url('lato-light-webfont.woff2') format('woff2'),
@@ -102,9 +81,6 @@
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'latohairline_italic';

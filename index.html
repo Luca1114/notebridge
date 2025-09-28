@@ -37,9 +37,49 @@
             <div style="background-color: #333642; height: 5px; width: 17px; position: absolute; z-index: 1000; right: -291.5px; border-radius: 2px;"></div>
     </div>
 
+    <div id="ClassSettingsPopUp">
+            <div class="tutorial" id="classSettings_tut" style="left: 82px; top: 135px;">
+                <object style="width: 20px;height: 20px; pointer-events: none; margin-right: 5px;" type="image/svg+xml" data="HtmlElements/tut_triangle.svg">
+                    <img src="HtmlElements/tut_triangle.png" alt="No SVG support">
+                </object>
+                <p>Your friends can use this code to access the class! <a style="color: #D0D4E1; font-family: 'latobold';" href="">Learn More</a> </p>
+            </div>
+
+            <div class="ClassSettingsBackground">
+                <div id="closeClassSettingsPopup" style="cursor: pointer; position: absolute; right: 25px;">
+                    <object style="width: 13px;height: 13px; pointer-events: none;" type="image/svg+xml" data="ICONS/close-rounded.svg">
+                        <img src="ICONS/close-rounded.png" alt="No SVG support">
+                    </object>
+                </div>
+
+                <h3>Class Settings</h3>
+                <div class="align" style="justify-content: space-between; margin-top: 30px;">
+                    <p>Name</p> <input class="textfield" id="nameChangeInput" type="text"> <button id="changeClassName">Save</button>
+                </div>
+                <div class="align" style="justify-content: start; margin-top: 15px;">
+                    <p style="width: 145px; margin: 0;">Class Code</p> 
+                    <div id="classSettings_tut_btn" style="cursor: pointer;">
+                        <object style="width: 20px;height: 20px; pointer-events: none; margin-right: 5px;" type="image/svg+xml" data="ICONS/question_mark.svg">
+                            <img src="ICONS/question_mark_fallback.png" alt="No SVG support">
+                        </object>
+                    </div>
+                    <p id="classCode" style="font-family: 'latobold';">NDK1D</p>
+                </div>
+                <div class="align"> <button id="SignOutButton">Sign Out</button> </div>
+            </div>
+            <div class="triangle tpos3"></div>
+            <div style="background-color: #333642; height: 5px; width: 17px; position: absolute; z-index: 1000; left: 46.5px; border-radius: 2px;"></div>
+    </div>
+
     <nav>
+        <div class="tutorial" id="nav-tut" style="left: 10px; top: 30px;">
+            <object style="width: 20px;height: 20px; pointer-events: none; margin-right: 5px; left: 10px;" type="image/svg+xml" data="HtmlElements/tut_triangle.svg">
+                <img src="HtmlElements/tut_triangle.png" alt="No SVG support">
+            </object>
+            <p>Click to go to the tutorials page!</p>
+        </div>
         <div style="display: flex; align-items: center;">
-            <div class="question_btn" style="cursor: pointer;">
+            <div class="question_btn" id="nav_tut_btn" style="cursor: pointer;">
                 <object data="ICONS/question_mark.svg" type="image/svg+xml" width="auto" height="20px">
                     <img src="ICONS/question_mark_fallback.png" alt="Fallback icon" style="height: 20px;">
                 </object>
@@ -177,5 +217,6 @@
     <script type="module" src="JS/loginPopup.js"></script>
     <script type="module" src="JS/userPopup.js"></script>
     <script type="module" src="JS/accountPopup.js"></script>
+    <script type="module" src="JS/tutorials.js"></script>
 </body>
 </html>

@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" 
+      content="connect-src 'self' 
+                           https://www.gstatic.com 
+                           https://*.firebaseio.com 
+                           wss://*.firebaseio.com 
+                           https://firestore.googleapis.com 
+                           https://identitytoolkit.googleapis.com;">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NoteBridge | We take the load of your shoulders!</title>
 
@@ -15,6 +22,11 @@
     <script src="../JS/index.js"></script> <!--This is the Main JS File-->
 </head>
 <body>
+    <div class="accountTOP">
+        <p style="font-family: 'latoregular';">You're logged in as:</p> <p style="font-family: 'latobold'; margin:0 0px 0 5px; border-right: 2px solid #666B7A; padding-right: 10px;" id="usernameDisplayer"></p>
+        <button id="switchLogScreen">Switch accounts</button>
+    </div>
+
     <div id="LoginPopup" class="center">
         <div>
             <h3 style="color: #E8CEA1; font-size: 22px;">Create a class!</h3>

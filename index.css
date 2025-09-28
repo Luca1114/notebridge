@@ -26,6 +26,29 @@ body {
     justify-content: center;
 }
 
+/*! Tutorial mini-box*/ 
+
+.tutorial {
+    position: absolute;
+    z-index: 1000000;
+}
+
+.tutorial object {
+    width: 10px;
+    position: relative;
+    top: 10px;
+    left: 25px;
+}
+
+.tutorial p {
+    padding: 5px 10px;
+    background-color: #17866A;
+    width: max-content;
+    border-radius: 5px;
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.15);
+    
+}
+
 /** Nav*/
 
 nav {
@@ -50,6 +73,21 @@ nav {
 .question_btn:hover {
     background-color: #3C3F4C;
     border-radius: 5px;
+}
+
+#nav-tut {
+    /* Initially hidden and fully transparent */
+    visibility: hidden;
+    opacity: 0;
+
+    /* Apply a transition for the fade effect */
+    transition: opacity 0.3s ease, visibility 0.3s linear;
+}
+
+/* Class to show the tutorial box */
+#nav-tut.visible {
+    visibility: visible;
+    opacity: 1;
 }
 
 .plus_btn {
@@ -138,7 +176,6 @@ nav {
     pointer-events: auto;
 }
 
-
 .AccountSettingsBackground {
     position: absolute;
     z-index: 1000; /* High z-index to ensure it's on top; removed duplicate */
@@ -149,12 +186,10 @@ nav {
     box-shadow: 0px 0 30px rgba(0, 0, 0, 0.15);
     padding: 30px 25px; /* Removed duplicate padding */
     position: absolute;
-
-    
 }
 
 #closeAccountPopup {
-    
+    transition: all 0.5s;
     position: absolute;
     right: 20px;
     top: 30px;
@@ -308,6 +343,140 @@ main .menu img {
 .invite_people_btn:hover {
     background-color: #4f5e5153;
     cursor: pointer;
+}
+
+/*! Class settings POPUP */
+
+#ClassSettingsPopUp {
+    /*opacity: 0;
+    visibility:hidden;*/
+    transition: opacity 0.3s ease;
+    will-change: opacity; /* Hint to browser to optimize transition */
+    position: fixed;
+    left: 17px;
+    top: 123px;
+    z-index: 5000;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+/*
+#AccountSettingsPopUp.visible {
+    opacity: 1;
+    visibility: visible;
+}
+*/
+
+/* Background overlay to close the popup when clicked outside */
+/*
+#AccountSettingsPopUp.visible .AccountSettingsBackground {
+    pointer-events: auto;
+}
+*/
+
+.ClassSettingsBackground {
+    position: absolute;
+    z-index: 1000; /* High z-index to ensure it's on top; removed duplicate */
+    width: 270px;
+    background-color: #333642;
+    border: 2px solid #9ca2b6;
+    border-radius: 5px;
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.15);
+    padding: 30px 25px; /* Removed duplicate padding */
+    position: absolute;
+}
+
+.ClassSettingsBackground input.textfield {
+    width: 100%;
+    font-size: 13px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #3C3F4C;
+    border: 1px solid #8E9199;
+    transition: all 0.5s;
+    color: #D0D4E1;
+    outline: none;
+    padding-left: 5px;
+    font-family: 'latobold';
+}
+
+.ClassSettingsBackground input.textfield:focus {
+    border: 1px solid #b9bfd3;
+    background-color: #454958;
+}
+
+#closeClassSettingsPopup {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    padding: 0;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+#closeClassSettingsPopup:hover {
+    background-color: #3C3F4C;
+}
+
+#ClassSettingsPopUp p {
+    font-family: 'latoregular';
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+button#changeClassName {
+    margin-left: 5px;
+    height: 25px;
+    background-color: #484b59;
+    border: 1px solid #ACB5D0;
+    color: #ACB5D0;
+    font-family: 'latobold';
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button#changeClassName:hover {
+    background-color: #575b6c;
+    border: 1px solid #c6cee9;
+    color: #c6cee9;
+}
+
+#classCode {
+    background-color: #666B7A;
+    color: #9CE4CF;
+    font-weight: bold;
+    height: 24px;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.tpos3 {
+    position: absolute;
+    left: 43px;
+    top: -50px;
+    z-index: -30;
+}
+
+#classSettings_tut {
+    /* Initially hidden and fully transparent */
+    visibility: hidden;
+    opacity: 0;
+
+    /* Apply a transition for the fade effect */
+    transition: opacity 0.3s ease, visibility 0.3s linear;
+}
+
+/* Class to show the tutorial box */
+#classSettings_tut.visible {
+    visibility: visible;
+    opacity: 1;
 }
 
 /* File Share*/

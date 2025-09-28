@@ -1,12 +1,15 @@
 // classMove.js
 import { auth, db } from './firebase.js'; 
 import { collection, addDoc, doc, updateDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, updateProfile, signOut} from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 import { query, where, getDocs, arrayUnion } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+import { getDoc, deleteField } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
 // UI Elements
 const joinClassButton = document.getElementById('JoinClassButton');
 const classCodeInput = document.getElementById('classCodeInput');
+
+const logoutBTNLogScreen = document.getElementById("switchLogScreen");
 
 /**
  * Generates a 5-character alphanumeric code.
@@ -167,3 +170,66 @@ document.getElementById('CreateClassPageButton').addEventListener('click', async
         alert("An error occurred while creating the class. Please try again.");
     }
 });
+
+
+
+
+// classMove.js (Starting from the last DOMContentLoaded block)
+
+// ... (Your existing code for generateClassCode, joinClass, and button listeners) ...
+
+// ⭐ CORRECTED LOGIC: Use onAuthStateChanged to get the user object
+document.addEventListener("DOMContentLoaded", () => {
+    // onAuthStateChanged listens for when the user is authenticated (or not)
+    // and provides the 'user' object when it's ready.
+    onAuthStateChanged(auth, async (user) => {
+        if (user) {
+            // ⭐ 1. Now it is safe to define 'uid' from the 'user' object
+            const uid = user.uid; 
+            console.log("User is logged in with UID:", uid);
+
+            // 2. Fetch user data using the defined 'uid'
+            const userDocRef1 = doc(db, "users", uid);
+            const userDocSnap1 = await getDoc(userDocRef1);
+
+            if (userDocSnap1.exists()) {
+                const userData1 = userDocSnap1.data();
+                console.log("User data:", userData1);
+
+                // 3. Update User Display Name
+                // You were alerting the displayName, this is where you can access it:
+                console.log(userData1.displayName);
+                document.getElementById("usernameDisplayer").textContent = userData1.displayName;
+                
+            } else {
+                console.log("No such user document!");
+                // You may need a displayClassName function in this file if it's used here
+                // displayClassName("No User Data"); 
+            }
+        }
+    });
+});
+
+
+// * Logout with the button switch accounts
+if (logoutBTNLogScreen) {
+    logoutBTNLogScreen.addEventListener('click', (event) => {
+        logoutUser1();
+        event.stopPropagation();
+    });
+} else {
+    console.error('closeAccountPopup not found!');
+}
+
+function logoutUser1() {
+    signOut(auth).then(() => {
+    // Sign-out successful.
+    console.log("User signed out successfully.");
+    // Redirect or update UI to reflect the logged-out state
+    //window.location.href = './LogScreen/LogScreen.html';
+    window.location.href = './LogScreen.html';
+  }).catch((error) => {
+    // An error happened.
+    console.error("Error signing out:", error);
+  });
+}
