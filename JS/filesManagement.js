@@ -1,12 +1,6 @@
 // chipsArrange.js
-import { closeAccountPopup } from "./accountPopup.js"; // Import the function
-
-const addButton = document.getElementById('addButton');
-const popup = document.getElementById('filesPopup');
-const closePopupBtn = document.getElementById('closePopup');
 const container = document.getElementById('containernoteschips');
 const nothingmessage = document.getElementById('nonotesmessage');
-const LoginAddButton = document.getElementById('LoginButton');
 
 let divCount = 0;
 
@@ -27,49 +21,6 @@ function chipCheck() {
 
 // Run chipCheck on load
 window.onload = chipCheck;
-
-//* POPUP
-
-// Open popup with fade-in
-const openPopup = () => {
-    // Call the function to close the other popup first
-    closeAccountPopup();
-
-    if (popup) {
-        //console.log('Opening popup, initial state:', popup.style.opacity, popup.style.visibility);
-        popup.style.visibility = 'visible'; // Make element visible
-        popup.style.opacity = '0'; // Ensure starting point
-        // Force reflow to apply initial state
-        popup.offsetHeight;
-        popup.style.opacity = '1'; // Trigger fade-in
-        popup.classList.add('visible');
-        event.stopPropagation();
-    } else {
-        console.error('popup element not found');
-    }
-};
-
-// Close popup with fade-out
-export const closePopup = () => {
-    if (popup) {
-        // popup, initial state:', popup.style.opacity, popup.style.visibility);
-        popup.style.opacity = '0'; // Start fade-out
-        setTimeout(() => {
-            popup.style.visibility = 'hidden'; // Hide after transition
-            popup.style.opacity = ''; // Reset opacity
-            popup.classList.remove('visible');
-            console.log('Popup closed, final state:', popup.style.opacity, popup.style.visibility);
-        }, 300); // Match CSS transition duration (0.3s)
-    }
-};
-
-// Detect clicks outside the popup
-document.addEventListener('click', function(event) {
-    if (popup && popup.classList.contains('visible') && !popup.contains(event.target)) {
-        //console.log('Clicked outside the visible popup, target:', event.target);
-        closePopup();
-    }
-});
 
 //* CHIPS
 
@@ -120,18 +71,4 @@ const addNewDiv = () => {
     outerDiv.appendChild(newDiv);
     container.appendChild(outerDiv);
 };
-
-// Attach event listeners
-if (addButton) {
-    addButton.addEventListener('click', (event) => {
-        openPopup();        // Call the second function
-    });
-} else {
-    console.error('addButton not found');
-}
-
-if (closePopupBtn || LoginAddButton) {
-    closePopupBtn.addEventListener('click', closePopup);
-    LoginAddButton.addEventListener('click', closePopup);
-}
 

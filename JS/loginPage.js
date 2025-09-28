@@ -1,5 +1,5 @@
-import { createUser } from "./email-password.js";
-import { signinUser } from "./email-password.js";
+import { createUser } from "./loginPage2.js";
+import { signinUser } from "./loginPage2.js";
 
 const LoginPopup = document.getElementById('LoginPopup');
 //Switch

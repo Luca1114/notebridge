@@ -4,8 +4,6 @@ import { auth, db } from './firebase.js';
 import { updateDoc, doc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 import { updateProfile, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 
-import { closePopup } from "./chipsArrange.js"
-
 /**
  * Updates the value of the name input field in the account settings popup.
  * This function is called from index.js after fetching the user's display name.
@@ -81,56 +79,3 @@ const logoutBtn = document.getElementById('SignOutButton');
 if (logoutBtn) {
     logoutBtn.addEventListener('click', logoutUser);
 }
-
-
-//! accountPopup.js
-
-const accountButtonNav = document.getElementById("AccountButton");
-const accountPopup = document.getElementById("AccountSettingsPopUp");
-const closeAccountPopupBtn = document.getElementById("closeAccountPopup");
-
-const openAccountPopup = () => {
-    closePopup();
-
-    if (accountPopup) {
-        //console.log("open");
-        accountPopup.style.display = "block";
-        accountPopup.classList.add('visible');
-    }
-};
-
-export const closeAccountPopup = () => {
-    if (accountPopup) {
-        accountPopup.classList.remove('visible');
-    }
-}
-
-if (accountButtonNav) {
-    accountButtonNav.addEventListener('click', (event) => {
-        openAccountPopup();
-        event.stopPropagation();
-    });
-} else {
-    console.error('AccountBTN not found!');
-}
-
-if (closeAccountPopupBtn) {
-    closeAccountPopupBtn.addEventListener('click', (event) => {
-        closeAccountPopup();
-        event.stopPropagation();
-    });
-} else {
-    console.error('closeAccountPopup not found!');
-}
-
-window.addEventListener('click', (event) => {
-    if (accountPopup) {
-        const isClickInsidePopup = accountPopup.contains(event.target);
-        const isClickOnAccountBtn = accountButtonNav && accountButtonNav.contains(event.target);
-        const isPopupVisible = accountPopup.classList.contains('visible');
-
-        if (isPopupVisible && !isClickInsidePopup && !isClickOnAccountBtn) {
-            closeAccountPopup();
-        }
-    }
-});

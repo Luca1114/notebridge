@@ -2,22 +2,22 @@ import { auth, db } from './firebase.js'; // Adjust path if needed
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, updateProfile } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 import { setDoc, doc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-import { emailCheck1 } from "./loginPopup.js";
-import { passCheck1 } from "./loginPopup.js";
-import { nickCheck2 } from "./loginPopup.js";
-import { emailCheck2 } from "./loginPopup.js";
-import { passCheck2 } from "./loginPopup.js";
+import { emailCheck1 } from "./loginPage.js";
+import { passCheck1 } from "./loginPage.js";
+import { nickCheck2 } from "./loginPage.js";
+import { emailCheck2 } from "./loginPage.js";
+import { passCheck2 } from "./loginPage.js";
 
 //Sign up Errors
-import { displayErrors1 } from "./loginPopup.js"
-import { displayErrors2 } from "./loginPopup.js"
-import { displayErrors3 } from "./loginPopup.js"
-import { displayErrors4 } from "./loginPopup.js"
+import { displayErrors1 } from "./loginPage.js"
+import { displayErrors2 } from "./loginPage.js"
+import { displayErrors3 } from "./loginPage.js"
+import { displayErrors4 } from "./loginPage.js"
 //Login Errors
-import { displayErrors5 } from "./loginPopup.js"
-import { displayErrors6 } from "./loginPopup.js"
-import { displayErrors7 } from "./loginPopup.js"
-import { displayErrors8 } from "./loginPopup.js"
+import { displayErrors5 } from "./loginPage.js"
+import { displayErrors6 } from "./loginPage.js"
+import { displayErrors7 } from "./loginPage.js"
+import { displayErrors8 } from "./loginPage.js"
 
 //* SIGN UP
 // Add this inside a button click event (we’ll create the button later)
