@@ -477,6 +477,24 @@ button#changeClassName:hover {
     opacity: 1;
 }
 
+#LeaveClassBTN {
+    margin-top: 25px;
+    background-color: #423C47;
+    border: 1px solid #E49C9C;
+    color: #FF9277;
+    font-family: 'latobold';
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#LeaveClassBTN:hover {
+    border: 1px solid #f6aeae;
+    color: #ffac97;
+    background-color: #57484d;
+}
+
 /* File Share*/
 
 .file_share {

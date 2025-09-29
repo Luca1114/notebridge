@@ -3,6 +3,20 @@
 import { auth, db } from './firebase.js';
 import { updateDoc, doc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 import { updateProfile, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+import { getDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+import { displayName } from './index.js'
+
+//? Displays the nameof the user in the top right of the Index
+const accountButtonNav = document.getElementById("AccountBTN");
+
+//Displays the name of the user to the account <p></p>
+export function displayUserName() {
+    //console.log('display name riuscito!!')
+    accountButtonNav.textContent = displayName;
+}
+
 
 /**
  * Updates the value of the name input field in the account settings popup.

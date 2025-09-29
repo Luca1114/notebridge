@@ -8,7 +8,6 @@
     <!--* JS Links-->
     <script type="module" src="JS/firebase.js"></script> <!--This is the Firebase JS File-->
     <script type="module" src="JS/index.js"></script> <!--This is the Main JS File-->
-    <script type="module" src="JS/email-password.js"></script>
 
     <link rel="icon" type="image" href="/HtmlElements/favicon.png"> <!-- Favicon -->
 
@@ -65,7 +64,7 @@
                     </div>
                     <p id="classCode" style="font-family: 'latobold';">NDK1D</p>
                 </div>
-                <div class="align"> <button id="SignOutButton">Leave Class</button> </div>
+                <div class="align"> <button id="LeaveClassBTN">Leave Class</button> </div>
             </div>
             <div class="triangle tpos3"></div>
             <div style="background-color: #333642; height: 5px; width: 17px; position: absolute; z-index: 1000; left: 46.5px; border-radius: 2px;"></div>
@@ -217,8 +216,19 @@
     <script type="module" src="JS/filesManagement.js"></script>
     <script type="module" src="JS/indexPopups.js"></script>
     <script type="module" src="JS/loginPage.js"></script>
-    <script type="module" src="JS/userPopup.js"></script>
     <script type="module" src="JS/accountPopup.js"></script>
     <script type="module" src="JS/tutorials.js"></script>
+
+    <script type="module">
+        import { leaveClassAndReload } from '/JS/index.js';
+
+        const LeaveClassBTN = document.getElementById('LeaveClassBTN');
+
+        if (LeaveClassBTN) {
+            LeaveClassBTN.addEventListener('click', leaveClassAndReload);
+        } else {
+            console.error('SignOutButton not found for class leave logic!');
+        }
+    </script>
 </body>
 </html>
